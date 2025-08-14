@@ -13,6 +13,10 @@ from app.routers import receiving_slips
 from app.routers import reports
 from app.routers import dashboard_activity
 from app.routers import filter_query
+from app.routers import utility_query
+from app.routers import stock_discrepancy
+from app.routers import batch_operation
+from app.routers import additionals_reporting
 app = FastAPI(
     title="Nrtc API",
     description="API NRTC",
@@ -32,3 +36,7 @@ app.include_router(receiving_slips.router)
 app.include_router(reports.router)
 app.include_router(dashboard_activity.router)
 app.include_router(filter_query.router)
+app.include_router(utility_query.router)
+app.include_router(stock_discrepancy.router)
+app.include_router(batch_operation.router)
+app.include_router(additionals_reporting.router)
